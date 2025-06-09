@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Compras</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+</head>
+
+<body>
+    <header>
+        <h1>Lista de compras</h1>
+        <nav>
+            <button class="nav__button--menu" onclick="OnMenu()">Menu</button>
+            <ul id="MenuMerc" style="list-style:none;">
+                <li><a href="index.html">Colruyt</a></li>
+                <li><a href="lidl.html">Lidl</a></li>
+                <li><a href="Carrefour.html">Carrefour</a></li>
+                <li><a href="Outros.html">Outros</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="main__soma"><span>Lidl - soma total: </span><input id="soma" type="number"></div>
+        <section>
+            <div class="main__titulo">
+                <button id="14" class="main__button--titulo" onclick="bottonOpen(this)">
+                    <span class="main__titulo--span">Frutas</span>
+                    <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                </button>
+            </div>
+            <div class="main__bloco" id="main__bloco--14" style="display: none;">
+                <div id="main__bloco--14-1" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--14-1" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Banana</span>
+                    <input id="main__itemCusto--14-1" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-2" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-3" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+                <div id="main__bloco--14-2" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--14-4" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Batatas</span>
+                    <input id="main__itemCusto--14-2" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-5" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-6" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+                <div id="main__bloco--14-3" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--14-7" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Coentro</span>
+                    <input id="main__itemCusto--14-3" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-8" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-9" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+                <div id="main__bloco--14-4" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--14-10" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Cenoura</span>
+                    <input id="main__itemCusto--14-4" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-11" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-12" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+
+                <div id="main__bloco--14-5" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--14-13" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Limão</span>
+                    <input id="main__itemCusto--14-5" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-14" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-15" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+
+
+                <div id="main__bloco--14-6" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--14-16" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Morango</span>
+                    <input id="main__itemCusto--14-6" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-17" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-18" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+
+                <div id="main__bloco--14-7" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--14-19" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Tomate</span>
+                    <input id="main__itemCusto--14-7" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-20" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--14-21" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+            </div>
+            <div class="main__titulo">
+                <button id="15" class="main__button--titulo" onclick="bottonOpen(this)">
+                    <span class="main__titulo--span">Gelados</span>
+                    <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                </button>
+            </div>
+            <div class="main__bloco" id="main__bloco--15" style="display: none;">
+                <div id="main__bloco--15-1" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--15-1" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Salame</span>
+                    <input id="main__itemCusto--15-1" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--15-2" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--15-3" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+                <div id="main__bloco--15-2" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--15-4" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">manteiga Milbona</span>
+                    <input id="main__itemCusto--15-2" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--15-5" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--15-6" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+
+            </div>
+
+            <div class="main__titulo">
+                <button id="16" class="main__button--titulo" onclick="bottonOpen(this)">
+                    <span class="main__titulo--span">Massas, cereais</span>
+                    <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                </button>
+            </div>
+            <div class="main__bloco" id="main__bloco--16" style="display: none;">
+                <div id="main__bloco--16-1" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--16-1" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Açucar</span>
+                    <input id="main__itemCusto--16-1" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--16-2" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--16-3" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+                <div id="main__bloco--16-2" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--16-4" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">arroz</span>
+                    <input id="main__itemCusto--16-2" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--16-5" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--16-6" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+
+                <div id="main__bloco--16-3" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--16-7" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Granola</span>
+                    <input id="main__itemCusto--16-3" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--16-8" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--16-9" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+
+                <div id="main__bloco--16-4" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--16-10" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">òleo</span>
+                    <input id="main__itemCusto--16-4" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--16-11" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--16-12" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+
+                <div id="main__bloco--16-5" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--16-13" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Sal</span>
+                    <input id="main__itemCusto--16-5" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--16-14" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--16-15" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+
+            </div>
+
+            <div class="main__titulo">
+                <button id="17" class="main__button--titulo" onclick="bottonOpen(this)">
+                    <span class="main__titulo--span">Mistura</span>
+                    <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                </button>
+            </div>
+            <div class="main__bloco" id="main__bloco--17" style="display: none;">
+                <div id="main__bloco--17-1" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--17-1" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Frango assado</span>
+                    <input id="main__itemCusto--17-1" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--17-2" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--17-3" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+                <div id="main__bloco--17-2" class="main__item" ondblclick="statusItem(this)">
+                    <input id="main__item--17-4" type="number" class="main__input--number-check" min="0"
+                        oninput="salvarValor(this)">
+                    <span class="main__item--span">Churisso</span>
+                    <input id="main__itemCusto--17-2" type="number" class="main__item--text"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--17-5" type="number" class="main__input--number-stock" min="0"
+                        oninput="salvarValor(this)">
+                    <input id="main__item--17-6" type="number" class="main__input--number-last" min="0"
+                        oninput="salvarValor(this)">
+                </div>
+
+
+            </div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
