@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 html{
-    background-color: rgba(248, 232, 243);
+    background-color: rgba(255, 232, 243);
 }
 
 body,
@@ -109,7 +109,7 @@ li {
     height: 180px;
     min-width: 140px;
     border: 1px solid gray;
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: rgba(255, 0, 0, 0.7);
 }
 
@@ -121,55 +121,73 @@ li {
     font-size: 20px;
     text-align: center;
 }
+.main__item::before{
+    content: '€';
+    font-size: 20px;
+    position: absolute;
+    bottom:18px;
+    left: 10px;
+    color: white;
+}
 
 .main__item--text {
     position: absolute;
-    top: 68%;
-    left: 3%;
+    top: 75%;
+    left: 7%;
     width: 70px;
     height: 30px;
     text-align: center;
     font-size: 21px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index:1;
 }
 
 .main__input--number-last {
     position: absolute;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 40px;
     font-size: 20px;
     padding-left: 5px;
     padding-right: 0px;
     display: inline-block;
-    left: 77%;
-    top: 68%;
+    left: 60%;
+    top: 72%;
     text-align: left;
     border: 0.5px solid gray;
     border-radius: 30px;
+    text-align: center;
+    z-index:1;
 }
 
 .main__input--number-stock {
     position: absolute;
-    height: 30px;
-    width: 45px;
+    height: 35px;
+    width: 40px;
     font-size: 20px;
     padding-left: 5px;
     padding-right: 0px;
-    left: 65%;
-    top: 3%;
+    left: 60%;
+    top: 8%;
     border: 0.5px solid gray;
-    border-radius: 3px;
+    border-radius: 30px;
+    text-align: center;
+    z-index:1;
 }
 
 .main__input--number-check {
-    height: 30px;
-    width: 45px;
+    height: 35px;
+    width: 40px;
     font-size: 20px;
     padding-left: 5px;
     padding-right: 0px;
-    margin-top: 2%;
-    margin-left: 2%;
+    margin-top: 8%;
+    margin-left: 7%;
     border: 0.5px solid gray;
-    border-radius: 3px;
+    border-radius: 30px;
+    text-align: center;
+    z-index:2;
 }
 
 /* Comandos Mouse */
@@ -188,7 +206,8 @@ li:hover {
 .main__input--number-check:hover {
     scale: 300%;
     width: 45px;
-}
+     z-index:2;
+   }
 
 .main__input--number-stock:hover {
     scale: 300%;
@@ -198,12 +217,14 @@ li:hover {
 .main__input--number-last:hover {
     scale: 300%;
     width: 45px;
-    border-radius: 0px;
-}
+    }
 
 .main__item--text:hover {
     scale: 300%;
     width: 65px;
+    background-color: white;
+    color: black;
+    z-index:2;
 }
 
 /* imagens */
