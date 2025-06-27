@@ -1,7 +1,17 @@
 @charset "utf-8";
+:root{
+    --fundPrinc: rgb(255, 232, 243);
+    --BtPrinc:  rgb(103,36,103);
+    --BtDestaq: rgb(162, 114, 174);
+    --txPrinc: rgb(103,36,103);
+    --txDestq: rgb(162, 114, 174);
+    --txTex: white;
+    --main__input--txt: black;
+    --main__input--number: white;
+}
 
 html{
-    background-color: rgba(255, 232, 243);
+    background-color: var(--fundPrinc);
 }
 
 body,
@@ -15,17 +25,18 @@ h1 {
     text-align: center;
    margin-top:0px ;
    margin-bottom: 10px;
+   color: var(--txPrinc);
 }
 
 header,p {
     padding-top: 0px;
     margin-top: 0px;
-     background-color:rgb(211, 211, 211) ;
+     background-color:var(--fundPrinc);
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--txTex);
     display: inline-block;
     width: 100%;
 }
@@ -33,11 +44,11 @@ a {
 .nav__button--menu {
     display: inline-block;
     width: 100%;
-    background-color: rgb(70, 70, 70);
+    background-color: var(--BtPrinc);
     border: none;
     padding-top: 3px;
     padding-bottom: 3px;
-    color: white;
+    color: var(--txTex);
 }
 
 #MenuMerc {
@@ -47,9 +58,9 @@ a {
 }
 
 li {
-    border: 1px solid rgb(128, 128, 128);
+    border: 1px solid var(--BtPrinc);
     text-align: center;
-    background-color: rgb(98, 97, 97);
+    background-color: var(--BtDestaq);
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 18px;
@@ -65,7 +76,6 @@ li {
 }
 
 .main__titulo {
-    /* border: 1px solid black; */
     width: 90%;
     margin: auto;
 }
@@ -73,14 +83,22 @@ li {
 .main__button--titulo {
     width: 100%;
     display: flex;
-    background-color: rgb(103,36,103);
+    background-color: var(--BtPrinc);
     margin-bottom: 0px;
     border: none;
     text-align: left;
-    color: white;
+    color: var(--txTex);
     font-size: 21px;
-    box-shadow: 0px 1px 5px rgba(224, 143, 224, 0.5);
+    box-shadow: 0px 1px 5px var(--BtDestaq);
 }
+.main__soma{
+    color: var(--txPrinc) ;
+}
+#soma{
+    background-color: var(--fundPrinc);
+    color: var(--txPrinc);
+    border: none;
+} 
 
 .main__titulo--span {
     width: 50%;
@@ -94,14 +112,12 @@ li {
 
 .main__bloco {
     display: flex;
-    /* border: 1px solid black; */
     justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
     flex-wrap: wrap;
     gap: 20px;
-
 }
 
 .main__item {
@@ -127,7 +143,7 @@ li {
     position: absolute;
     bottom:18px;
     left: 10px;
-    color: white;
+    color: var(--txTex);
 }
 
 .main__item--text {
@@ -140,8 +156,9 @@ li {
     font-size: 21px;
     background-color: transparent;
     border: none;
-    color: white;
+    color: var(--txTex);
     z-index:1;
+
 }
 
 .main__input--number-last {
@@ -159,6 +176,8 @@ li {
     border-radius: 30px;
     text-align: center;
     z-index:1;
+    background-color: var(--main__input--number);
+    color: var(--main__input--txt);
 }
 
 .main__input--number-stock {
@@ -174,6 +193,9 @@ li {
     border-radius: 30px;
     text-align: center;
     z-index:1;
+   background-color: var(--main__input--number);
+    color: var(--main__input--txt);
+    
 }
 
 .main__input--number-check {
@@ -188,14 +210,16 @@ li {
     border-radius: 30px;
     text-align: center;
     z-index:2;
+    background-color: var(--main__input--number);
+    color: var(--main__input--txt);
 }
 
 /* Comandos Mouse */
 .main__button--titulo:hover {
-    background-color: rgb(162, 114, 174);
+    background-color: var(--txDestq);
     margin-bottom: 10px;
     box-shadow: none;
-    color: white;
+    color: var(--txTex);
 }
 
 li:hover {
