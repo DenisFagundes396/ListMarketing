@@ -56,49 +56,47 @@ window.onload = function valor() {
         }
     }
     //Return the sum and value each product//
-for (let a = 1; a <= 20; a++) {
-	for (let b = 1; b <= 20; b++) {
-	let maincusto = document.getElementById("main__itemCusto--" + a + "-" + b);
-		if (maincusto) {
-        let valorSalvo = localStorage.getItem(maincusto.id);
-		maincusto.value = valorSalvo;
-		console.log("main__itemCusto--" + a + "-" + b);
-		}
-	}
-}
-//     let resultado = document.getElementById("soma");
-//     let soma = 0
-//     let multi = 0
-//     for (let a = 1; a <= 20; a++) {
-//         c = 0
-//         for (let b = 1; b <= 20; b++) {
-//             let bloco = document.getElementById("main__itemCusto--" + a + "-" + b);
-//             if (bloco) {
-//                 let valorSalvo = JSON.parse(localStorage.getItem(bloco.id));
-//                 if (valorSalvo)
-//                     c = c+3;
-//                     let itemLast = document.getElementById("main__item--" + a + "-" + c);
-//                     let last = JSON.parse(localStorage.getItem(itemLast.id));
-//                     if (last)
-//                         multi = Number(valorSalvo) * Number(last);
-//                     soma = soma + multi;
-//                     bloco.value = valorSalvo;
-//                     console.log("main__itemCusto--" + a + "-" + b);
-//                     console.log("main__item--" + a + "-" + c);
-//                     console.log("Custo do produto: " + valorSalvo);
-//                     console.log("last :" + last)
-//                     console.log("Valor de soma é: " + soma);
-//                     resultado.value = soma;
-//                 }
-//             }
-//         }
-}
 
+    let resultado = document.getElementById("soma");
+    let soma = 0;
+    let multi = 0;
+    for (let a = 1; a <= 20; a++) {
+    let c = 0;
+        for (let b = 1; b <= 20; b++) {
+            let maincusto = document.getElementById("main__itemCusto--" + a + "-" + b);
+            if (maincusto) {
+                let valorSalvo = JSON.parse(localStorage.getItem(maincusto.id));
+                 maincusto.value = valorSalvo;
+                 console.log(maincusto.id);
+                if (valorSalvo){
+                    c = c+3;
+                    let itemLast = document.getElementById("main__item--" + a + "-" + c);
+                    let last = JSON.parse(localStorage.getItem(itemLast.id));
+                    if (last){
+                        multi = Number(valorSalvo) * Number(last);
+                    soma = soma + multi;
+                    
+                    // console.log("main__item--" + a + "-" + c);
+                    // console.log("Custo do produto: " + valorSalvo);
+                    // console.log("last :" + last)
+                    // console.log("Valor de soma é: " + soma);
+                    }
+                    }
+                }
+            }
+        }
+}
+resultado.value = soma;
 
-//Inspeção inicial da lista de compras//
+// Inspeção inicial da lista de compras//
 function resetCor(){
-    
-let bloco = document.getElementById("main__bloco--1-1");    
-bloco.style.backgroundColor = 'rgba(223, 223, 23, 0.7)';
-localStorage.setItem(bloco.id, bloco.style.backgroundColor);
+for(let a=1; a<=20; a++){
+    for (let b=1; b<=20; b++){    
+    let bloco = document.getElementById("main__bloco--"+a+"-"+b);
+    if (bloco){    
+    bloco.style.backgroundColor = 'rgba(223, 223, 23, 0.7)';
+    localStorage.setItem(bloco.id, bloco.style.backgroundColor);
+    }
+    }
+}
 }
