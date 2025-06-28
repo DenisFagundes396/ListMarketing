@@ -72,10 +72,10 @@ window.onload = function valor() {
                     soma = soma + multi;
                     bloco.value = valorSalvo;
                     console.log("main__itemCusto--" + a + "-" + b);
-                    console.log("main__item--" + a + "-" + c);
-                    console.log("Custo do produto: " + valorSalvo);
-                    console.log("last :" + last)
-                    console.log("Valor de soma é: " + soma);
+                    // console.log("main__item--" + a + "-" + c);
+                    // console.log("Custo do produto: " + valorSalvo);
+                    // console.log("last :" + last)
+                    // console.log("Valor de soma é: " + soma);
                     resultado.value = soma;
                 }
             }
