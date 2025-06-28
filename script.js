@@ -85,8 +85,9 @@ window.onload = function valor() {
                 }
             }
         }
+        resultado.value = soma;
 }
-resultado.value = soma;
+
 
 // Inspeção inicial da lista de compras//
 function resetCor(){
