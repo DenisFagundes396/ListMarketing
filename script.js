@@ -81,6 +81,13 @@ window.onload = function valor() {
             }
         }
 }
+//Inspeção inicial da lista de compras//
+function resetCor(){
+    
+let bloco = document.getElementById("main__bloco--1-1");    
+bloco.style.backgroundColor = 'rgba(223, 223, 23, 0.7)';
+localStorage.setItem(bloco.id, bloco.style.backgroundColor);
+}
 
 // Recuperar A COR SALVA e aplicá-lo ao input quando a página carregar
 // window.onload = function cor() {
