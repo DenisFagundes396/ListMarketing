@@ -35,7 +35,7 @@ function salvarValor(input) {
 window.onload = function valor() {
     //Valores Stock, last, check//
     for (let j = 1; j <= 20; j++) {
-        for (let i = 1; i <= 30; i++) {
+        for (let i = 1; i <= 40; i++) {
             let input = document.getElementById("main__item--" + j + "-" + i);
             if (input) {
                 let valorSalvo = localStorage.getItem(input.id);
